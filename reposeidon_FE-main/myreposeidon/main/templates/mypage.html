@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="{% static 'admin/img/reposeidon_logo.png' %}" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'admin/css/common.css' %}" />
+    <link rel="stylesheet" href="{% static 'admin/css/mypage.css' %}" />
+
+    <title>Reposeidon</title>
+  </head>
+  <body>
+    <img
+      class="profile_icon"
+      src="{% static 'admin/img/profile_icon.png' %}"
+      alt="profileIcon"
+    />
+    <div class="contentBox">
+      <div class="username_info">
+        <p>username123 님의 마이페이지</p>
+        <!-- 위에 username123 부분에는 회원관리 DB에 담긴 models.py에 {{user.id}}삽입 -->
+      </div>
+
+      <div class="tempsave_list">
+        <p class="tempsave_text">임시 저장 목록</p>
+        <div class="save_element">
+          <p class="save_title">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <p class="save_time">21.08.22 23:33:45</p>
+        </div>
+        <div class="save_element">
+          <p class="save_title">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <p class="save_time">21.08.22 23:33:45</p>
+        </div>
+        <div class="save_element">
+          <p class="save_title">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <p class="save_time">21.08.22 23:33:45</p>
+        </div>
+      </div>
+
+      <div class="scrap_list">
+        <p class="scrap_text">스크랩한 자료</p>
+
+        <!-- DB에 저장된 내용을 반복문을 거쳐 화면에 출력할 수 있도록 -->
+        <div class="scrap_element">
+          <p class="scrap_title">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <p class="scrap_link">
+            https://www.korea.kr/news/policyNewsView.do?newsId=148886541
+          </p>
+        </div>
+        <div class="scrap_element">
+          <p class="scrap_title">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <p class="scrap_link">
+            https://www.korea.kr/news/policyNewsView.do?newsId=148886541
+          </p>
+        </div>
+        <div class="scrap_element">
+          <p class="scrap_title">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <p class="scrap_link">
+            https://www.korea.kr/news/policyNewsView.do?newsId=148886541
+          </p>
+        </div>
+        <div class="scrap_element">
+          <p class="scrap_title">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <p class="scrap_link">
+            https://www.korea.kr/news/policyNewsView.do?newsId=148886541
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <img
+        class="footerImg"
+        src="{% static 'admin/img/footerImg.JPG' %}"
+        alt="footerImage"
+      />
+    </footer>
+  </body>
+</html>

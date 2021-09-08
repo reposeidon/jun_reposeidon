@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="{% static 'admin/img/reposeidon_logo.png' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'admin/css/common.css' %}" />
+    <link rel="stylesheet" href="{% static 'admin/css/signup.css' %}" />
+
+    <title>Reposeidon</title>
+  </head>
+  <body>
+    <h1>Sign Up</h1>
+    <div class="signupBox">
+      <div class="signup">
+        <div class="signup_email">
+          <input
+            type="email"
+            name=""
+            id=""
+            placeholder="이메일 주소를 입력하세요"
+          />
+        </div>
+        <div class="signup_id">
+          <input type="id" name="" id="" placeholder="ID를 입력하세요" />
+        </div>
+        <div class="signup_pw">
+          <input
+            type="password"
+            name=""
+            id=""
+            placeholder="비밀번호를 입력하세요"
+          />
+        </div>
+        <div class="pw_confirm">
+          <input
+            type="confirm"
+            name=""
+            id=""
+            placeholder="비밀번호를 다시 한 번 입력하세요"
+          />
+        </div>
+        <div class="signupBtn">
+          <input
+            type="submit"
+            value="회원가입"
+            onClick="location.href='main_beforeLogin.html'"
+          />
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <img
+        class="footerImg"
+        src="{% static 'admin/img/footerImg.JPG' %}"
+        alt="footerImage"
+      />
+    </footer>
+  </body>
+</html>

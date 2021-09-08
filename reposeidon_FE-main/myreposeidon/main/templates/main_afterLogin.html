@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'admin/css/common.css'%}" />
+    <link rel="stylesheet" href="{%static 'admin/css/main_afterLogin.css'%}" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link rel="icon" href="{% static 'admin/img/reposeidon_logo.png' %}" />
+
+    <title>Reposeidon</title>
+  </head>
+  <body>
+    <div class="inner__content">
+      <!-- 좌측 레포트 작성 공간 -->
+      <form action=" ">
+        <div class="writeForm">
+          <!-- 레포트 제목 폼 -->
+          <div class="titleForm">
+            <input
+              type="text"
+              placeholder="레포트 제목을 입력하세요"
+              class="title"
+            />
+          </div>
+          <!-- 레포트 내용 폼 -->
+          <div class="contentForm">
+            <textarea
+              placeholder="레포트 내용을 입력하세요"
+              class="content"
+              style="
+                font-family: Noto Sans KR, sans-serif;
+                font-size: 15px;
+                display: block;
+              "
+              ;
+            ></textarea>
+          </div>
+          <!-- 버튼 공간 -->
+          <div class="buttonBox" style="display: block">
+            <p class="saveInfo">저장된 내용 없음</p>
+            <input
+              type="image"
+              class="sync_button"
+              src="{% static 'admin/img/syncBtn.JPG' %}"
+            />
+            <input
+              type="image"
+              class="save_button"
+              src="{% static 'admin/img/saveButton.JPG' %}"
+            />
+          </div>
+        </div>
+      </form>
+
+      <!-- 우측 검색 결과 출력 공간 -->
+      <div class="searchBox">
+        <p class="searchFilter">검색 필터</p>
+        <div class="filterBtn">
+          <!-- 왜인지 모르겠는데 css에 스타일시트 적용하면 안먹혀서 여기에 함 -->
+          <style>
+            .chkBox {
+              margin: 9px;
+              background-color: #bdbdbd;
+              color: #ffffff;
+              font-weight: bold;
+              font-size: 16px;
+              border-radius: 4px;
+              border: 0;
+              outline: 0;
+              /* overflow: auto; */
+              float: left;
+              box-shadow: 1px 1px 5px black;
+            }
+
+            .chkBox label {
+              float: left;
+              min-width: 70px;
+              border: 0;
+              outline: 0;
+              margin: 0px;
+            }
+
+            .chkBox label span {
+              border: 0;
+              outline: 0;
+              text-align: center;
+              display: block;
+            }
+
+            .chkBox label input {
+              border: 0;
+              outline: 0;
+              position: absolute;
+              visibility: hidden;
+            }
+
+            .chkBox input:checked + span {
+              background-color: #369bed;
+              border-radius: 4px;
+              color: #ffffff;
+              border: 0;
+              outline: 0;
+            }
+          </style>
+
+          <div class="chkBox">
+            <label>
+              <input type="checkbox" name="news" value="news" checked="" /><span
+                >뉴스/기사</span
+              >
+            </label>
+          </div>
+          <div class="chkBox">
+            <label>
+              <input type="checkbox" name="blog" value="blog" /><span
+                >블로그</span
+              >
+            </label>
+          </div>
+          <div class="chkBox">
+            <label>
+              <input type="checkbox" name="thesis" value="thesis" /><span
+                >논문</span
+              >
+            </label>
+          </div>
+          <div class="chkBox">
+            <label>
+              <input type="checkbox" name="magazine" value="magazine" /><span
+                >매거진</span
+              >
+            </label>
+          </div>
+          <div class="chkBox">
+            <label>
+              <input type="checkbox" name="etc" value="etc" /><span>기타</span>
+            </label>
+          </div>
+        </div>
+        <p class="searchResult"><br /><br />검색 결과</p>
+
+        <div>
+          <!-- 검색 결과 크롤링 자료 출력부 -->
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <img
+        class="footerImg"
+        src="{% static 'admin/img/footerImg.JPG' %}"
+        alt="footerImage"
+      />
+    </footer>
+  </body>
+</html>
